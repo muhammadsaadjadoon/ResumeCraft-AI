@@ -1,0 +1,9 @@
+{
+  "API_BASE_URL": "http://10.0.2.2:8081",
+  "FIREBASE_API_KEY": "YOUR_ANDROID_FIREBASE_API_KEY",
+  "FIREBASE_APP_ID": "1:208320208392:android:8f459152ed9918b29bbbbd",
+  "FIREBASE_PROJECT_ID": "resumecraft-ai-android",
+  "FIREBASE_SENDER_ID": "208320208392",
+  "FIREBASE_AUTH_DOMAIN": "resumecraft-ai-android.firebaseapp.com",
+  "FIREBASE_IOS_BUNDLE_ID": ""
+}

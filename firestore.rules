@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId}/resumes/{resumeId} {
+      function owner() { return request.auth != null && request.auth.uid == userId; }
+      allow read, delete: if owner();
+      allow create, update: if owner()
+        && request.resource.data.keys().hasOnly(['id','title','data','template','accent','updated'])
+        && request.resource.data.id == resumeId
+        && request.resource.data.title is string
+        && request.resource.data.title.size() <= 80
+        && request.resource.data.data is map
+        && request.resource.data.data.keys().hasOnly(['name','role','email','phone','location','linkedin','website','summary','skills','experience','education','projects','certifications','languages'])
+        && request.resource.data.template in ['modern','classic','minimal']
+        && request.resource.data.accent is int
+        && request.resource.data.updated is string;
+    }
+  }
+}

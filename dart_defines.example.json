@@ -1,0 +1,9 @@
+{
+  "API_BASE_URL": "http://localhost:8081",
+  "FIREBASE_API_KEY": "",
+  "FIREBASE_APP_ID": "",
+  "FIREBASE_PROJECT_ID": "",
+  "FIREBASE_SENDER_ID": "",
+  "FIREBASE_AUTH_DOMAIN": "",
+  "FIREBASE_IOS_BUNDLE_ID": ""
+}
